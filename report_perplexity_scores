@@ -1,0 +1,95 @@
+import numpy as np
+import math
+import spacy
+import torch
+
+def compute_perplexity_scores(model, dataset):
+    for sentence in dataset:
+        # Tokenize and convert words to indices (replace with your preprocessing)
+        words = tokenize(sentence)
+        input_indices = [word_to_index[word] for word in words]  # Convert words to indices
+        
+        # Convert to PyTorch tensor
+        inputs = torch.LongTensor(input_indices).unsqueeze(0)  # Add batch dimension
+        
+        # Forward pass
+        outputs, _ = model(inputs)
+        
+        # Define target (e.g., if you have a target sentence)
+        target = torch.LongTensor(target_indices).unsqueeze(0)  # Add batch dimension
+        
+        # Calculate loss
+        loss = criterion(outputs.view(-1, vocab_size), target.view(-1))
+        
+        # Calculate perplexity
+        perplexity = torch.exp(loss)
+        
+        # Print or store perplexity for the current sentence
+        print(f"Perplexity for sentence '{sentence}': {perplexity.item()}")
+
+# Define your sentences and corresponding perplexity scores
+# split text into sentences
+nlp_sentencizer = spacy.blank("en")
+nlp_sentencizer.add_pipe("sentencizer")
+nlp_sentencizer.max_length = 6400000
+corpus = open('Auguste_Maquet.txt', 'r')
+ds = corpus.read()
+ds.replace("\n", "")
+tokens = nlp_sentencizer(ds)
+
+sentences = []
+for sentence in tokens.sents:
+    sentences.append(str(sentence).replace('\n', " "))
+print(len(sentences))
+
+# split sentences to train and text
+# random.shuffle(sentences)
+train = sentences[:30000]
+val = sentences[30000:40000]
+test = sentences[40000:59710]
+
+# load model
+model = None
+
+# compute PPL Scores
+# train
+train_PPL_scores = compute_perplexity_scores(model, train)
+# Calculate the average perplexity score
+average_score = sum(train_PPL_scores) / len(train_PPL_scores)
+# Define the file path where you want to save the text file
+file_path = "perplexity_scores_train_NNLM.txt"
+# Open the file in write mode and write the information
+with open(file_path, "w") as file:
+    for sentence, score in zip(train, train_PPL_scores):
+        file.write(f'{sentence}\t{score:.2f}\n')
+    file.write(f'Average Score: {average_score:.2f}')
+# Print the average score
+print(f'Average train PPL Score: {average_score:.2f}')
+
+# val
+val_PPL_scores = compute_perplexity_scores(model, val)
+# Calculate the average perplexity score
+average_score = sum(val_PPL_scores) / len(val_PPL_scores)
+# Define the file path where you want to save the text file
+file_path = "perplexity_scores_val_NNLM.txt"
+# Open the file in write mode and write the information
+with open(file_path, "w") as file:
+    for sentence, score in zip(val, val_PPL_scores):
+        file.write(f'{sentence}\t{score:.2f}\n')
+    file.write(f'Average Score: {average_score:.2f}')
+# Print the average score
+print(f'Average val PPL Score: {average_score:.2f}')
+
+# train
+test_PPL_scores = compute_perplexity_scores(model, test)
+# Calculate the average perplexity score
+average_score = sum(test_PPL_scores) / len(test_PPL_scores)
+# Define the file path where you want to save the text file
+file_path = "perplexity_scores_test_NNLM.txt"
+# Open the file in write mode and write the information
+with open(file_path, "w") as file:
+    for sentence, score in zip(test, test_PPL_scores):
+        file.write(f'{sentence}\t{score:.2f}\n')
+    file.write(f'Average Score: {average_score:.2f}')
+# Print the average score
+print(f'Average test PPL Score: {average_score:.2f}')
