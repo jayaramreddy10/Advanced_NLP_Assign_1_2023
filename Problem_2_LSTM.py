@@ -137,7 +137,7 @@ def train_network(args, train_dataset, val_dataset, vocabulary):
     vocab_size = len(vocabulary)  # Size of your vocabulary
     embedding_dim = 300  # Dimension of word embeddings
     hidden_dim = 512  # Dimension of hidden state in LSTM
-    num_layers = 2  # Number of LSTM layers
+    num_layers = 1  # Number of LSTM layers
 
     # Input shape: [seq_len : 5, batch_size, embedding_dim]
     # Output shape: [seq_len, batch_size, hidden_size]

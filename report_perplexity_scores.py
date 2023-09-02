@@ -62,11 +62,33 @@ train_data = clean_text(train)  #split into words
 val_data = clean_text(val)
 test_data = clean_text(test)
 vocabulary = build_vocab(train_data)  # give a label to each unique word 
-vocabulary['unk'] = -1
+vocabulary['unk'] = len(vocabulary)
 word_emd_model = t_vocab.GloVe(name='6B', dim=300)  # You can change 'dim' to match the dimensionality of your GloVe model
 
-# load model
-checkpoint_path = "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt"
+is_NNLM = False
+if(is_NNLM):
+    # load model
+    checkpoint_path = "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt"
+    # Create the model and optimizer objects
+    #load model architecture 
+    model = NNLM(input_dim = 300, hidden_dim_1 = 200, hidden_dim_2 = 25, len_vocab=len(vocabulary), window_size = 5)
+    model = model.to(device)
+else: 
+    checkpoint_path = "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/LSTM/state_0.pt"
+    # Create the model and optimizer objects
+    #load model architecture 
+        #load model architecture 
+    vocab_size = len(vocabulary)  # Size of your vocabulary
+    embedding_dim = 300  # Dimension of word embeddings
+    hidden_dim = 512  # Dimension of hidden state in LSTM
+    num_layers = 1  # Number of LSTM layers
+
+    # Input shape: [seq_len : 5, batch_size, embedding_dim]
+    # Output shape: [seq_len, batch_size, hidden_size]
+    # Hidden shape: [num_layers : 2, batch_size, hidden_size]
+    LM_model = LSTM_LM(embedding_dim, hidden_dim, num_layers, vocab_size)
+    model = LM_model.to(device)
+
 # Load the checkpoint
 checkpoint = torch.load(checkpoint_path)
 # Access the desired variables from the checkpoint
@@ -74,10 +96,7 @@ model_state_dict = checkpoint['model']
 # optimizer_state_dict = checkpoint['optimizer']
 # epoch = checkpoint['epoch']
 
-# Create the model and optimizer objects
-#load model architecture 
-model = NNLM(input_dim = 300, hidden_dim_1 = 200, hidden_dim_2 = 25, len_vocab=len(vocabulary), window_size = 5)
-model = model.to(device)
+
 # optimizer = torch.optim.SGD(model.parameters(), lr=0.001)
 # Load the model and optimizer states from the checkpoint
 model.load_state_dict(model_state_dict)
