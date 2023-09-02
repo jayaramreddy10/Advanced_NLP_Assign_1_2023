@@ -1,0 +1,16 @@
+
+59710
+Backend TkAgg is interactive backend. Turning interactive mode on.
+Epoch 0 / 2 | /home/jayaram/research/research_tracks/table_top_rearragement/test_diffusion_planning/logs/maze2d-large-v1/diffusion
+0:   9.7460  | t:   1.6364
+[ utils/training ] Saved model to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/LSTM/state_0.pt
+val dataloader len: 314
+Validation Loss: 9.5714, Epoch: 0
+Epoch 1 / 2 | /home/jayaram/research/research_tracks/table_top_rearragement/test_diffusion_planning/logs/maze2d-large-v1/diffusion
+100:   9.5608  | t:   0.7874
+[ utils/training ] Saved model to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/LSTM/state_1.pt
+val dataloader len: 314
+Validation Loss: 7.8911, Epoch: 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Done.
+Total training time: 259.3636853694916 seconds.

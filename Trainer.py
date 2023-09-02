@@ -40,6 +40,7 @@ class Trainer_jayaram(object):
         model,
         train_dataset, 
         val_dataset, 
+        is_LSTM = False, 
         ema_decay=0.995,
         train_batch_size=512,
         train_lr=2e-5,
@@ -86,7 +87,10 @@ class Trainer_jayaram(object):
         # ))
         self.optimizer = torch.optim.Adam(model.parameters(), lr=train_lr)
 
-        self.logdir = results_folder
+        if(is_LSTM):
+            self.logdir = '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/LSTM'
+        else: 
+            self.logdir = results_folder
         self.bucket = bucket
         self.n_reference = n_reference
         self.n_samples = n_samples
@@ -245,11 +249,11 @@ class Trainer_jayaram(object):
         # Set your model to evaluation mode
         self.model.eval()
         # Iterate through the validation dataset
-        print('val dataloader len: {}'.format(len(self.val_dataloader)))
+        # print('val dataloader len: {}'.format(len(self.val_dataloader)))
 
         with torch.no_grad():
             for val_batch in self.val_dataloader:
-                time_s = time.time()
+                # time_s = time.time()
 
                 val_batch[0] = einops.rearrange(val_batch[0], 'b w e -> w b e') 
                 for i, el in enumerate(val_batch):
@@ -264,8 +268,8 @@ class Trainer_jayaram(object):
                 val_loss = self.criterion(val_outputs, val_targets)
                 validation_loss += val_loss.item()          
 
-                time_e = time.time()
-                print('one batch val time: {}'.format(time_e - time_s))
+                # time_e = time.time()
+                # print('one batch val time: {}'.format(time_e - time_s))
 
         
         average_validation_loss = validation_loss / len(self.val_dataloader)

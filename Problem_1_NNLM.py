@@ -188,14 +188,14 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-e", "--epochs", type=int, default=100, help="Number of epochs to train."
+        "-e", "--epochs", type=int, default=2, help="Number of epochs to train."
     )
 
     parser.add_argument(
         "-n_steps_per_epoch",
         "--number_of_steps_per_epoch",
         type=int,
-        default=5000,  #5000
+        default=200,  #5000
         help="Number of steps per epoch",
     )
 

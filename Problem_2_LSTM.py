@@ -148,8 +148,8 @@ def train_network(args, train_dataset, val_dataset, vocabulary):
     #-----------------------------------------------------------------------------#
     #--------------------------------- main loop ---------------------------------#
     #-----------------------------------------------------------------------------#
-
-    trainer = Trainer_jayaram(LM_model, train_dataset, val_dataset)
+    is_LSTM = True
+    trainer = Trainer_jayaram(LM_model, train_dataset, val_dataset, is_LSTM)
 
     for i in range(args.epochs):
         print(f'Epoch {i} / {args.epochs} | {args.save_ckpt}')
@@ -188,14 +188,14 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-e", "--epochs", type=int, default=50, help="Number of epochs to train."
+        "-e", "--epochs", type=int, default=2, help="Number of epochs to train."
     )
 
     parser.add_argument(
         "-n_steps_per_epoch",
         "--number_of_steps_per_epoch",
         type=int,
-        default=1000,
+        default=100,
         help="Number of steps per epoch",
     )
 
