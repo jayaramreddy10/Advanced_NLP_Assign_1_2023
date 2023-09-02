@@ -1,0 +1,1151 @@
+2023-09-02 10:17:21,076 INFO    StreamThr :19114 [internal.py:wandb_internal():86] W&B internal server running at pid: 19114, started at: 2023-09-02 10:17:21.074711
+2023-09-02 10:17:21,080 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status
+2023-09-02 10:17:21,089 INFO    WriterThread:19114 [datastore.py:open_for_write():85] open: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/run-LSTM_training_1.wandb
+2023-09-02 10:17:21,090 DEBUG   SenderThread:19114 [sender.py:send():379] send: header
+2023-09-02 10:17:21,117 DEBUG   SenderThread:19114 [sender.py:send():379] send: run
+2023-09-02 10:17:22,084 INFO    SenderThread:19114 [dir_watcher.py:__init__():211] watching files in: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files
+2023-09-02 10:17:22,084 INFO    SenderThread:19114 [sender.py:_start_run_threads():1121] run started: LSTM_training_1 with start time 1693630041.074278
+2023-09-02 10:17:22,087 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:22,088 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:22,108 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: check_version
+2023-09-02 10:17:22,108 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: check_version
+2023-09-02 10:17:22,347 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: run_start
+2023-09-02 10:17:22,366 DEBUG   HandlerThread:19114 [system_info.py:__init__():31] System info init
+2023-09-02 10:17:22,366 DEBUG   HandlerThread:19114 [system_info.py:__init__():46] System info init done
+2023-09-02 10:17:22,366 INFO    HandlerThread:19114 [system_monitor.py:start():181] Starting system monitor
+2023-09-02 10:17:22,367 INFO    SystemMonitor:19114 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-02 10:17:22,369 INFO    HandlerThread:19114 [system_monitor.py:probe():201] Collecting system info
+2023-09-02 10:17:22,371 INFO    SystemMonitor:19114 [interfaces.py:start():190] Started cpu monitoring
+2023-09-02 10:17:22,379 INFO    SystemMonitor:19114 [interfaces.py:start():190] Started disk monitoring
+2023-09-02 10:17:22,382 INFO    SystemMonitor:19114 [interfaces.py:start():190] Started gpu monitoring
+2023-09-02 10:17:22,387 INFO    SystemMonitor:19114 [interfaces.py:start():190] Started memory monitoring
+2023-09-02 10:17:22,392 INFO    SystemMonitor:19114 [interfaces.py:start():190] Started network monitoring
+2023-09-02 10:17:22,395 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:22,396 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:22,422 DEBUG   HandlerThread:19114 [system_info.py:probe():195] Probing system
+2023-09-02 10:17:22,432 DEBUG   HandlerThread:19114 [system_info.py:_probe_git():180] Probing git
+2023-09-02 10:17:22,458 DEBUG   HandlerThread:19114 [system_info.py:_probe_git():188] Probing git done
+2023-09-02 10:17:22,458 DEBUG   HandlerThread:19114 [system_info.py:probe():240] Probing system done
+2023-09-02 10:17:22,458 DEBUG   HandlerThread:19114 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-82-generic-x86_64-with-glibc2.31', 'python': '3.9.17', 'heartbeatAt': '2023-09-02T04:47:22.422559', 'startedAt': '2023-09-02T04:47:21.052090', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_2_LSTM.py', 'codePath': 'Problem_2_LSTM.py', 'git': {'remote': 'https://github.com/jayaramreddy10/Advanced_NLP_Assign_1_2023.git', 'commit': '18e4e00e8078504fbaeb959c99897b6a23c0b864'}, 'email': 'ramreddyai1010@gmail.com', 'root': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1', 'host': 'jayaram-Inspiron-7570', 'username': 'jayaram', 'executable': '/home/jayaram/miniconda3/envs/Advanced_NLP/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1995.05125, 'min': 400.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 1948.348, 'min': 400.0, 'max': 4000.0}, {'current': 1960.41, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2065.737, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 1906.864, 'min': 400.0, 'max': 4000.0}], 'disk': {'total': 68.2022705078125, 'used': 43.01249313354492}, 'gpu': 'NVIDIA GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 940MX', 'memory_total': 4294967296}], 'memory': {'total': 15.360076904296875}}
+2023-09-02 10:17:22,459 INFO    HandlerThread:19114 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-02 10:17:22,459 INFO    HandlerThread:19114 [system_monitor.py:probe():214] Publishing system info
+2023-09-02 10:17:22,459 DEBUG   HandlerThread:19114 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-02 10:17:22,461 DEBUG   HandlerThread:19114 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-02 10:17:22,461 DEBUG   HandlerThread:19114 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-02 10:17:23,088 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:23,088 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/conda-environment.yaml
+2023-09-02 10:17:23,088 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/requirements.txt
+2023-09-02 10:17:24,398 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:24,398 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:24,473 DEBUG   HandlerThread:19114 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-02 10:17:24,481 INFO    HandlerThread:19114 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-02 10:17:24,486 DEBUG   SenderThread:19114 [sender.py:send():379] send: files
+2023-09-02 10:17:24,487 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-02 10:17:24,512 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 10:17:24,516 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: stop_status
+2023-09-02 10:17:25,083 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/conda-environment.yaml
+2023-09-02 10:17:25,083 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-metadata.json
+2023-09-02 10:17:25,124 DEBUG   SenderThread:19114 [sender.py:send():379] send: telemetry
+2023-09-02 10:17:25,944 INFO    wandb-upload_0:19114 [upload_job.py:push():131] Uploaded file /tmp/tmpjooz5bycwandb/d943iokp-wandb-metadata.json
+2023-09-02 10:17:26,125 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:26,399 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:26,400 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:28,401 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:28,401 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:30,402 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:30,402 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:31,125 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:32,404 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:32,404 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:34,405 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:34,405 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:36,087 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/output.log
+2023-09-02 10:17:36,384 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:36,407 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:36,407 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:38,088 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/output.log
+2023-09-02 10:17:38,410 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:38,411 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:40,414 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:40,415 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:42,328 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:42,417 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:42,418 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:43,372 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 10:17:43,375 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: stop_status
+2023-09-02 10:17:44,419 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:44,419 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:46,097 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/output.log
+2023-09-02 10:17:46,420 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:46,421 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:46,710 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:46,714 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:46,714 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:46,715 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:47,098 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:47,511 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:47,512 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:47,513 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:47,513 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:47,513 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:48,098 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:48,098 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/output.log
+2023-09-02 10:17:48,315 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:48,318 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:48,318 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:48,319 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:48,422 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:48,422 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:49,094 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:49,095 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:49,098 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:49,102 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:49,103 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:49,872 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:49,874 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:49,875 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:49,884 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:50,099 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:50,423 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:50,423 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:50,684 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:50,685 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:50,685 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:50,685 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:51,099 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:51,493 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:51,495 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:51,495 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:51,496 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:52,100 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:52,318 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:52,319 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:52,319 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:52,327 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:52,472 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:17:52,473 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:52,473 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:53,102 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:53,121 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:53,123 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:53,128 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:53,493 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:53,493 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:53,906 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:53,907 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:53,908 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:53,908 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:54,102 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:54,102 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/config.yaml
+2023-09-02 10:17:54,473 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:54,474 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:54,711 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:54,712 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:54,712 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:54,721 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:55,103 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:55,515 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:55,516 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:55,516 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:55,517 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:56,103 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:56,293 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:56,294 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:56,294 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:56,295 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:56,474 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:56,475 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:57,064 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:57,065 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:57,065 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:57,075 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:57,104 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:57,838 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:57,840 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:57,840 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:57,840 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:58,104 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:58,475 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:58,476 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:17:58,615 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:17:58,617 DEBUG   SenderThread:19114 [sender.py:send():379] send: history
+2023-09-02 10:17:58,618 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 10:17:58,618 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 10:17:58,619 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 10:17:58,619 INFO    SenderThread:19114 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 10:17:58,620 DEBUG   SenderThread:19114 [sender.py:send_request():406] send_request: stop_status
+2023-09-02 10:17:59,108 INFO    Thread-18 :19114 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_101721-LSTM_training_1/files/wandb-summary.json
+2023-09-02 10:17:59,447 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:00,245 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:00,476 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:00,477 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:01,059 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:01,845 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:02,477 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:02,477 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:02,626 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:03,393 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:04,170 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:04,171 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:04,478 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:04,479 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:04,919 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:05,684 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:06,445 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:06,486 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:06,486 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:07,225 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:07,998 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:08,487 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:08,488 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:08,766 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:09,533 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:09,766 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:10,303 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:10,488 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:10,489 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:11,075 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:11,848 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:12,489 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:12,490 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:12,603 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:13,364 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:14,122 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:14,491 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:14,491 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:14,903 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:15,673 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:16,439 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:16,491 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:16,492 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:17,217 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:18,017 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:18,492 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:18,493 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:18,810 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:19,017 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:19,615 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:20,380 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:20,493 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:20,494 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:21,159 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:21,732 INFO    SenderThread:19114 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f879cf2b130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879cf2b130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/lib/gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879cf2b130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2023-09-02 10:18:21,931 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:22,393 DEBUG   SystemMonitor:19114 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-02 10:18:22,539 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:18:22,540 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:22,540 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:22,715 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:23,491 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:24,265 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:24,541 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:24,541 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:25,023 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:25,024 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:25,820 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:26,542 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:26,542 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:26,594 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:27,367 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:28,143 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:28,550 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:28,550 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:28,902 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:29,675 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:30,455 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:30,551 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:30,551 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:30,674 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:31,227 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:31,999 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:32,552 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:32,552 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:32,770 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:33,542 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:34,308 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:34,553 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:34,554 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:35,092 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:35,850 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:36,555 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:36,555 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:36,607 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:36,609 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:37,382 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:38,156 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:38,556 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:38,556 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:38,928 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:39,706 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:40,475 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:40,557 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:40,557 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:41,253 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:42,017 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:42,253 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:42,558 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:42,558 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:42,802 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:43,560 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:44,319 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:44,559 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:44,559 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:45,091 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:45,869 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:46,560 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:46,560 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:46,641 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:47,414 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:47,414 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:48,183 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:48,561 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:48,561 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:48,969 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:49,739 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:50,518 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:50,562 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:50,562 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:51,288 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:52,041 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:52,610 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:18:52,610 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:52,611 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:52,812 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:52,813 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:53,597 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:54,373 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:54,611 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:54,612 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:55,151 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:55,923 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:56,612 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:56,613 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:56,712 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:57,132 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=60.0). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:18:57,496 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:58,289 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:58,496 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:18:58,613 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:58,614 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:18:59,063 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:18:59,332 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879c63c880>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:18:59,838 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:00,615 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:00,615 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:00,623 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:01,418 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:02,206 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:02,616 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:02,616 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:02,996 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:03,779 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:03,780 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:03,991 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879c63c340>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:19:04,575 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:04,624 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:04,624 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:05,370 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:06,165 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:06,625 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:06,625 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:06,942 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:07,718 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:08,505 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:08,626 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:08,627 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:09,303 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:09,303 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:10,093 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:10,627 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:10,628 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:10,883 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:11,667 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:12,464 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:12,629 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:12,629 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:12,874 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879c63c220>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:19:13,253 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:14,049 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:14,630 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:14,630 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:14,825 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:15,049 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:15,604 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:16,389 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:16,631 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:16,631 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:17,187 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:17,976 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:18,632 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:18,632 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:18,764 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:19,550 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:20,347 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:20,551 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:20,634 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:20,634 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:21,137 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:21,936 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:22,689 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:19:22,690 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:22,690 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:22,716 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:23,500 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:24,297 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:24,691 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:24,691 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:25,103 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:25,904 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:25,904 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:26,692 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:26,693 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:26,703 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:27,497 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:28,305 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:28,693 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:28,694 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:29,103 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:29,909 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:30,090 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879c63ce20>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:19:30,694 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:30,695 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:30,696 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:31,103 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:31,485 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:32,279 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:32,696 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:32,696 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:33,086 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:33,886 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:34,685 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:34,697 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:34,697 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:35,480 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:36,288 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:36,480 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:36,698 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:36,698 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:37,085 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:37,893 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:38,681 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:38,699 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:38,699 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:39,470 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:40,273 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:40,700 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:40,700 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:41,091 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:41,896 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:41,896 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:42,701 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:42,701 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:42,703 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:43,506 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:44,322 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:44,702 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:44,702 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:45,130 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:45,947 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:46,703 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:46,703 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:46,743 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:47,130 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:47,538 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:48,340 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:48,704 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:48,704 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:49,156 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:49,962 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:50,705 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:50,705 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:50,771 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:51,574 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:52,390 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:52,574 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:52,760 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:19:52,761 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:52,761 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:53,194 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:54,009 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:54,762 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:54,762 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:54,804 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:55,603 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:56,405 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:56,763 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:56,763 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:57,221 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:58,028 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:19:58,029 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:58,764 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:58,764 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:19:58,836 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:19:59,642 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:00,465 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:00,765 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:00,765 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:01,275 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:02,099 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:02,195 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879c63c6d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:20:02,766 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:02,766 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:02,900 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:03,276 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:03,700 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:04,510 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:04,767 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:04,767 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:05,331 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:06,144 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:06,768 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:06,768 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:06,956 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:07,766 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:08,588 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:08,767 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:08,769 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:08,769 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:09,400 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:10,221 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:10,770 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:10,771 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:11,022 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:11,821 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:12,631 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:12,771 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:12,772 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:13,451 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:14,265 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:14,265 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:14,772 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:14,773 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:15,082 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:15,898 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:16,729 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:16,773 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:16,774 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:17,551 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:18,382 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:18,774 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:18,775 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:19,194 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:19,552 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:20,005 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:20,776 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:20,776 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:20,823 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:21,656 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:22,484 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:22,828 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:20:22,829 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:22,829 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:23,320 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:24,152 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:20:24,831 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:24,832 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:25,154 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:26,833 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:26,833 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:28,834 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:28,835 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:30,301 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:30,836 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:30,836 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:32,837 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:32,838 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:34,838 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:34,839 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:35,662 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:36,840 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:36,840 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:38,841 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:38,841 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:40,842 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:40,842 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:41,207 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:42,843 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:42,844 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:44,851 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:44,852 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:46,716 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:46,853 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:46,853 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:48,854 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:48,854 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:50,855 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:50,855 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:52,242 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:52,934 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:20:52,936 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:52,936 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:54,937 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:54,937 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:56,938 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:56,938 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:57,750 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:20:58,939 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:20:58,940 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:00,941 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:00,941 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:02,942 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:02,943 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:03,274 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:03,274 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:04,943 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:04,944 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:06,944 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:06,945 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:08,801 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:08,946 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:08,946 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:10,947 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:10,947 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:12,948 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:12,948 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:14,378 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:14,950 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:14,951 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:15,175 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:16,003 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:16,385 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879cf6c070>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:21:16,867 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:16,952 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:16,952 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:17,724 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:18,590 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:18,953 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:18,953 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:19,466 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:19,724 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:20,336 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:20,954 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:20,955 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:21,205 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:22,068 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:22,945 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:23,012 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:21:23,013 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:23,013 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:23,801 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:24,658 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:25,014 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:25,014 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:25,069 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:25,519 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:26,376 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:27,015 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:27,015 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:27,241 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:28,121 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:28,992 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:29,016 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:29,016 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:29,861 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:30,726 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:30,726 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:31,017 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:31,017 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:31,606 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:32,464 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:33,018 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:33,018 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:33,322 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:34,182 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:35,019 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:35,019 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:35,040 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:35,903 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:36,040 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:36,782 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:37,020 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:37,020 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:37,648 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:38,517 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:39,021 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:39,021 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:39,382 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:40,259 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:41,022 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:41,023 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:41,117 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:41,381 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:41,973 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:42,834 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:43,023 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:43,024 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:43,692 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:44,558 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:45,024 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:45,025 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:45,435 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:46,305 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:46,693 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:47,025 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:47,026 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:47,175 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:48,040 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:48,918 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:49,026 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:49,027 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:49,774 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:50,632 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:51,027 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:51,028 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:51,491 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:52,348 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:52,350 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:53,076 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:21:53,077 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:53,077 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:53,216 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:54,094 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:54,967 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:55,078 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:55,078 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:55,836 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:56,703 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:57,079 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:57,079 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:57,581 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:57,702 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:21:58,438 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:21:59,080 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:59,080 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:21:59,294 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:00,155 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:01,012 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:01,081 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:01,081 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:01,877 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:02,756 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:03,012 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:03,082 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:03,083 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:03,625 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:04,493 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:05,083 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:05,084 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:05,359 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:06,235 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:07,084 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:07,085 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:07,092 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:07,949 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:08,359 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:08,811 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:09,086 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:09,086 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:09,668 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:10,533 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:11,087 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:11,087 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:11,410 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:12,279 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:13,088 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:13,088 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:13,148 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:14,013 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:14,015 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:14,892 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:15,089 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:15,089 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:15,749 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:16,605 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:17,090 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:17,090 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:17,465 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:18,323 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:19,091 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:19,091 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:19,188 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:19,323 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:20,065 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:20,937 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:21,099 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:21,099 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:21,805 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:22,670 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:23,171 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:22:23,172 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:23,172 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:23,550 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:24,407 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:24,670 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:25,173 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:25,174 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:25,265 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:26,124 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:26,982 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:27,174 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:27,175 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:27,847 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:28,728 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:29,176 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:29,176 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:29,597 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:29,983 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:30,466 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:31,177 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:31,177 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:31,331 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:32,208 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:33,065 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:33,178 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:33,178 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:33,922 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:34,783 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:35,179 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:35,179 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:35,640 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:35,642 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:36,505 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:37,187 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:37,187 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:37,383 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:38,251 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:39,121 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:39,188 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:39,188 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:39,986 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:40,863 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:40,986 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:41,189 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:41,189 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:41,720 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:42,577 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:43,190 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:43,191 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:43,442 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:44,298 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:45,163 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:45,191 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:45,192 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:46,041 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:46,300 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:46,911 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:47,192 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:47,193 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:47,781 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:48,647 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:49,194 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:49,194 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:49,527 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:50,386 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:51,195 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:51,195 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:51,242 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:51,647 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:52,102 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:52,960 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:53,253 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:22:53,254 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:53,254 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:53,824 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:54,703 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:55,255 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:55,255 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:55,571 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:56,439 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:57,256 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:57,256 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:57,305 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:57,306 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:22:58,184 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:59,042 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:22:59,263 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:59,263 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:22:59,898 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:00,757 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:01,264 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:01,265 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:01,615 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:02,479 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:02,615 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:03,265 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:03,266 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:03,357 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:04,227 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:05,097 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:05,266 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:05,267 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:05,962 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:06,839 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:07,267 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:07,268 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:07,696 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:07,963 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:08,554 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:09,268 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:09,269 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:09,413 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:10,270 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:11,134 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:11,269 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:11,270 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:12,011 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:12,881 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:13,270 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:13,270 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:13,277 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:13,748 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:14,615 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:15,278 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:15,278 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:15,493 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:16,350 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:17,207 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:17,279 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:17,279 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:18,069 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:18,925 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:18,926 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:19,280 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:19,280 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:19,790 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:20,671 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:21,281 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:21,281 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:21,539 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:22,407 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:23,273 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:23,370 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:23:23,371 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:23,371 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:24,150 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:24,273 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:25,006 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:25,372 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:25,372 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:25,863 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:26,722 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:27,373 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:27,373 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:27,580 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:28,445 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:29,320 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:29,374 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:29,374 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:29,579 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:30,190 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:31,060 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:31,375 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:31,376 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:31,924 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:32,801 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:33,376 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:33,377 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:33,659 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:34,516 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:34,924 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:35,376 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:35,378 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:35,378 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:36,233 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:37,097 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:37,380 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:37,380 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:37,974 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:38,844 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:39,381 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:39,381 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:39,712 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:40,578 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:40,579 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:41,382 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:41,383 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:41,458 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:42,314 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:43,173 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:43,383 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:43,384 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:44,032 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:44,891 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:45,384 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:45,385 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:45,759 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:45,891 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:46,637 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:47,386 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:47,386 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:47,505 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:48,373 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:49,239 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:49,387 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:49,387 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:50,117 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:50,974 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:51,238 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:51,388 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:51,388 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:51,830 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:52,570 WARNING FileStreamThread:19114 [file_stream.py:request_with_retry():666] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/team_messi/LSTM_training/LSTM_training_1/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f879cf6c640>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x7f87bc0a34c0>>, timeout=60.0), args: ('https://api.wandb.ai/files/team_messi/LSTM_training/LSTM_training_1/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}, 'wandb-history.jsonl': {'offset': 11, 'content': ['{"train loss LSTM": 9.7396240234375, "epoch": 0, "step no": 11, "_timestamp": 1693630075.1509593, "_runtime": 34.07668113708496, "_step": 11}', '{"train loss LSTM": 9.738703727722168, "epoch": 0, "step no": 12, "_timestamp": 1693630075.9135294, "_runtime": 34.83925127983093, "_step": 12}', '{"train loss LSTM": 9.73853588104248, "epoch": 0, "step no": 13, "_timestamp": 1693630076.6874292, "_runtime": 35.61315107345581, "_step": 13}']}}, 'dropped': 0}}
+2023-09-02 10:23:52,691 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:53,442 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:23:53,443 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:53,443 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:53,549 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:54,414 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:55,290 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:55,443 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:55,444 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:56,159 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:56,549 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:23:57,029 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:57,444 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:57,445 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:57,893 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:58,772 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:23:59,445 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:59,446 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:23:59,630 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:00,488 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:01,349 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:01,447 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:01,447 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:02,206 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:02,207 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:03,072 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:03,448 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:03,448 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:03,950 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:04,821 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:05,449 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:05,449 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:05,688 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:06,554 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:07,432 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:07,450 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:07,450 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:07,556 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:08,289 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:24:09,452 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:09,453 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:11,454 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:11,454 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:12,977 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:13,455 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:13,455 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:15,456 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:15,456 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:17,457 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:17,457 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:18,524 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:19,458 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:19,459 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:21,460 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:21,460 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:23,530 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:24:23,531 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:23,531 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:24,147 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:25,532 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:25,532 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:27,533 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:27,533 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:29,534 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:29,535 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:29,597 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:31,535 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:31,536 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:33,537 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:33,537 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:34,901 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:35,538 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:35,538 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:37,539 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:37,539 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:39,540 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:39,540 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:40,714 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:41,541 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:41,541 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:43,542 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:43,543 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:45,544 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:45,544 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:46,185 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:47,545 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:47,545 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:49,546 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:49,546 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:51,496 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:51,547 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:51,548 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:53,608 ERROR   gpu       :19114 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 10:24:53,608 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:53,609 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:55,610 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:55,610 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:56,835 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:24:57,611 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:57,612 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:59,613 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:24:59,613 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:01,615 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:01,616 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:01,786 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 10:25:02,149 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:25:03,618 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:03,618 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:04,301 DEBUG   HandlerThread:19114 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-02 10:25:05,621 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:05,621 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:07,624 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 10:25:07,624 ERROR   gpu       :19114 [interfaces.py:monitor():144] Failed to sample metric: Not Supported

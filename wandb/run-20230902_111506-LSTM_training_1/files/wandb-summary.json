@@ -1,0 +1,1 @@
+{"train loss LSTM": 7.245348930358887, "epoch": 1, "step no": 199, "_timestamp": 1693633966.4845598, "_runtime": 459.6720688343048, "_step": 401, "val loss LSTM": 7.2610595818537815, "_wandb": {"runtime": 459}}

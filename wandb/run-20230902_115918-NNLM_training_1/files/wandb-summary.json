@@ -1,0 +1,1 @@
+{"train loss NNLM": 9.428088188171387, "epoch": 1, "step no": 199, "_timestamp": 1693636270.3428338, "_runtime": 111.40695476531982, "_step": 401, "val loss NNLM": 9.423966407775879, "_wandb": {"runtime": 90}}

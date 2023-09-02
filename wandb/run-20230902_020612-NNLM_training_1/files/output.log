@@ -1,0 +1,17 @@
+
+59710
+Epoch 0 / 2 | /home/jayaram/research/research_tracks/table_top_rearragement/test_diffusion_planning/logs/maze2d-large-v1/diffusion
+0:   4.8754  | t:   0.4977
+100:   4.8015  | t:   5.4285
+Traceback (most recent call last):
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py", line 278, in <module>
+    train_network(args, train_dataset, val_dataset)
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py", line 155, in train_network
+    trainer.train_NNLM(device, i, n_train_steps=args.number_of_steps_per_epoch)
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Trainer.py", line 169, in train_NNLM
+    validation_loss += val_loss.item()
+RuntimeError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[ utils/training ] Saved model to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt

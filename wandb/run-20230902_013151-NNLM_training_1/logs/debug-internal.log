@@ -1,0 +1,151 @@
+2023-09-02 01:31:51,652 INFO    StreamThr :8785 [internal.py:wandb_internal():86] W&B internal server running at pid: 8785, started at: 2023-09-02 01:31:51.650943
+2023-09-02 01:31:51,659 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status
+2023-09-02 01:31:51,666 INFO    WriterThread:8785 [datastore.py:open_for_write():85] open: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/run-NNLM_training_1.wandb
+2023-09-02 01:31:51,668 DEBUG   SenderThread:8785 [sender.py:send():379] send: header
+2023-09-02 01:31:51,695 DEBUG   SenderThread:8785 [sender.py:send():379] send: run
+2023-09-02 01:31:52,647 INFO    SenderThread:8785 [dir_watcher.py:__init__():211] watching files in: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files
+2023-09-02 01:31:52,647 INFO    SenderThread:8785 [sender.py:_start_run_threads():1121] run started: NNLM_training_1 with start time 1693598511.651008
+2023-09-02 01:31:52,654 DEBUG   SenderThread:8785 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 01:31:52,655 INFO    SenderThread:8785 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 01:31:52,675 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: check_version
+2023-09-02 01:31:52,676 DEBUG   SenderThread:8785 [sender.py:send_request():406] send_request: check_version
+2023-09-02 01:31:52,890 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: run_start
+2023-09-02 01:31:52,903 DEBUG   HandlerThread:8785 [system_info.py:__init__():31] System info init
+2023-09-02 01:31:52,903 DEBUG   HandlerThread:8785 [system_info.py:__init__():46] System info init done
+2023-09-02 01:31:52,903 INFO    HandlerThread:8785 [system_monitor.py:start():181] Starting system monitor
+2023-09-02 01:31:52,905 INFO    SystemMonitor:8785 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-02 01:31:52,905 INFO    HandlerThread:8785 [system_monitor.py:probe():201] Collecting system info
+2023-09-02 01:31:52,907 INFO    SystemMonitor:8785 [interfaces.py:start():190] Started cpu monitoring
+2023-09-02 01:31:52,909 INFO    SystemMonitor:8785 [interfaces.py:start():190] Started disk monitoring
+2023-09-02 01:31:52,913 INFO    SystemMonitor:8785 [interfaces.py:start():190] Started gpu monitoring
+2023-09-02 01:31:52,917 INFO    SystemMonitor:8785 [interfaces.py:start():190] Started memory monitoring
+2023-09-02 01:31:52,920 INFO    SystemMonitor:8785 [interfaces.py:start():190] Started network monitoring
+2023-09-02 01:31:52,924 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:52,924 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:52,974 DEBUG   HandlerThread:8785 [system_info.py:probe():195] Probing system
+2023-09-02 01:31:52,997 DEBUG   HandlerThread:8785 [system_info.py:_probe_git():180] Probing git
+2023-09-02 01:31:53,031 DEBUG   HandlerThread:8785 [system_info.py:_probe_git():188] Probing git done
+2023-09-02 01:31:53,031 DEBUG   HandlerThread:8785 [system_info.py:probe():240] Probing system done
+2023-09-02 01:31:53,031 DEBUG   HandlerThread:8785 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-82-generic-x86_64-with-glibc2.31', 'python': '3.9.17', 'heartbeatAt': '2023-09-01T20:01:52.974516', 'startedAt': '2023-09-01T20:01:51.630385', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py', 'codePath': 'Problem_1_NNLM.py', 'git': {'remote': 'https://github.com/jayaramreddy10/Advanced_NLP_Assign_1_2023.git', 'commit': '18e4e00e8078504fbaeb959c99897b6a23c0b864'}, 'email': 'ramreddyai1010@gmail.com', 'root': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1', 'host': 'jayaram-Inspiron-7570', 'username': 'jayaram', 'executable': '/home/jayaram/miniconda3/envs/Advanced_NLP/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2025.009, 'min': 400.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 1855.022, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}], 'disk': {'total': 68.2022705078125, 'used': 43.00285339355469}, 'gpu': 'NVIDIA GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 940MX', 'memory_total': 4294967296}], 'memory': {'total': 15.360084533691406}}
+2023-09-02 01:31:53,032 INFO    HandlerThread:8785 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-02 01:31:53,032 INFO    HandlerThread:8785 [system_monitor.py:probe():214] Publishing system info
+2023-09-02 01:31:53,032 DEBUG   HandlerThread:8785 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-02 01:31:53,034 DEBUG   HandlerThread:8785 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-02 01:31:53,034 DEBUG   HandlerThread:8785 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-02 01:31:53,653 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/wandb-summary.json
+2023-09-02 01:31:53,662 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/conda-environment.yaml
+2023-09-02 01:31:53,662 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/requirements.txt
+2023-09-02 01:31:54,926 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:54,926 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:55,022 DEBUG   HandlerThread:8785 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-02 01:31:55,028 INFO    HandlerThread:8785 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-02 01:31:55,034 DEBUG   SenderThread:8785 [sender.py:send():379] send: files
+2023-09-02 01:31:55,034 INFO    SenderThread:8785 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-02 01:31:55,053 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 01:31:55,055 DEBUG   SenderThread:8785 [sender.py:send_request():406] send_request: stop_status
+2023-09-02 01:31:55,504 DEBUG   SenderThread:8785 [sender.py:send():379] send: telemetry
+2023-09-02 01:31:55,648 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/conda-environment.yaml
+2023-09-02 01:31:55,649 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/wandb-metadata.json
+2023-09-02 01:31:56,410 INFO    wandb-upload_0:8785 [upload_job.py:push():131] Uploaded file /tmp/tmp49cxkgf3wandb/sg9iyc74-wandb-metadata.json
+2023-09-02 01:31:56,927 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:56,928 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:57,505 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:31:58,929 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:31:58,929 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:00,937 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:00,937 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:02,506 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:02,938 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:02,939 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:04,940 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:04,940 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:06,653 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/output.log
+2023-09-02 01:32:06,941 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:06,941 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:07,613 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:08,655 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/output.log
+2023-09-02 01:32:08,944 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:08,944 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:10,046 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 01:32:10,047 DEBUG   SenderThread:8785 [sender.py:send_request():406] send_request: stop_status
+2023-09-02 01:32:10,946 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:10,946 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:12,947 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:12,948 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:13,290 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:14,659 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/output.log
+2023-09-02 01:32:14,950 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:14,950 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:16,951 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:16,952 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:18,307 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:18,664 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/output.log
+2023-09-02 01:32:18,954 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:18,955 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:20,957 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:20,958 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:23,032 ERROR   gpu       :8785 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 01:32:23,032 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:23,033 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:23,314 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:24,673 INFO    Thread-18 :8785 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_013151-NNLM_training_1/files/config.yaml
+2023-09-02 01:32:25,035 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:25,035 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:27,038 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:27,038 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:28,766 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:29,041 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:29,042 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:31,044 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:31,045 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:33,048 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:33,049 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:33,768 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:35,052 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:35,053 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:37,056 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:37,057 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:38,769 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:39,066 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:39,067 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:41,070 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:41,071 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:43,074 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:43,074 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:43,772 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:45,077 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:45,078 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:47,081 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:47,082 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:48,773 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:49,084 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:49,085 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:51,088 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:51,089 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:52,921 DEBUG   SystemMonitor:8785 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-02 01:32:52,927 DEBUG   SenderThread:8785 [sender.py:send():379] send: stats
+2023-09-02 01:32:53,168 ERROR   gpu       :8785 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-09-02 01:32:53,169 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:53,169 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:53,930 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:55,171 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:55,172 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:57,175 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:57,176 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:58,932 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:32:59,178 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:32:59,178 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:01,179 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:01,179 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:03,183 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:03,184 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:03,934 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:33:05,187 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:05,188 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:07,189 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:07,189 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:08,935 DEBUG   HandlerThread:8785 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:33:09,192 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:09,192 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:11,195 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 01:33:11,196 ERROR   gpu       :8785 [interfaces.py:monitor():144] Failed to sample metric: Not Supported

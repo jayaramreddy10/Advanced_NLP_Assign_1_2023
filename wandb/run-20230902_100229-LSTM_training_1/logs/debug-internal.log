@@ -1,0 +1,11 @@
+2023-09-02 10:02:29,929 INFO    StreamThr :17038 [internal.py:wandb_internal():86] W&B internal server running at pid: 17038, started at: 2023-09-02 10:02:29.927717
+2023-09-02 10:02:29,935 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: status
+2023-09-02 10:02:29,942 INFO    WriterThread:17038 [datastore.py:open_for_write():85] open: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_100229-LSTM_training_1/run-LSTM_training_1.wandb
+2023-09-02 10:02:29,943 DEBUG   SenderThread:17038 [sender.py:send():379] send: header
+2023-09-02 10:02:29,968 DEBUG   SenderThread:17038 [sender.py:send():379] send: run
+2023-09-02 10:02:34,971 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:02:39,974 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:02:44,978 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:02:49,980 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:02:54,984 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 10:02:59,986 DEBUG   HandlerThread:17038 [handler.py:handle_request():144] handle_request: keepalive

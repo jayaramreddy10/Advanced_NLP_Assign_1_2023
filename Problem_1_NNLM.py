@@ -18,6 +18,9 @@ import torchtext.vocab as t_vocab
 import torch
 import wandb
 
+# Set CUDA_LAUNCH_BLOCKING environment variable
+os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+
 random.seed(32)
 
 from Trainer import Trainer_jayaram
@@ -66,7 +69,7 @@ class AugusteDataset(Dataset):
         prefix_window = self.data[idx: idx + self.window_size]
         prefix_word_embeddings = []
 
-        # Define the <UNK> token to represent out-of-vocabulary words
+        # # Define the <UNK> token to represent out-of-vocabulary words
         unk_token = 'unk'
         # Iterate through the words in the window
         for word in prefix_window:
@@ -78,7 +81,7 @@ class AugusteDataset(Dataset):
                 word_embedding = self.word_emb_model.vectors[self.word_emb_model.stoi[unk_token]]
             prefix_word_embeddings.append(word_embedding)
 
-        # prefix_word_embeddings = [self.word_emb_model[word] for word in prefix]
+        # prefix_word_embeddings = [self.word_emb_model[word] for word in prefix_window]
         prefix_emb = np.concatenate(prefix_word_embeddings)
         prefix_emb = torch.from_numpy(prefix_emb)
 
@@ -148,7 +151,6 @@ def train_network(args, train_dataset, val_dataset):
     #-----------------------------------------------------------------------------#
 
     trainer = Trainer_jayaram(LM_model, train_dataset, val_dataset)
-
     for i in range(args.epochs):
         print(f'Epoch {i} / {args.epochs} | {args.save_ckpt}')
         trainer.train_NNLM(device, i, n_train_steps=args.number_of_steps_per_epoch)
@@ -186,14 +188,14 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-e", "--epochs", type=int, default=2, help="Number of epochs to train."
+        "-e", "--epochs", type=int, default=100, help="Number of epochs to train."
     )
 
     parser.add_argument(
         "-n_steps_per_epoch",
         "--number_of_steps_per_epoch",
         type=int,
-        default=200,  #5000
+        default=5000,  #5000
         help="Number of steps per epoch",
     )
 
@@ -250,7 +252,8 @@ if __name__ == "__main__":
     val_data = clean_text(val)
     test_data = clean_text(test)
     vocabulary = build_vocab(train_data)  # give a label to each unique word 
-    vocabulary['unk'] = -1
+    train_vocab_len = len(vocabulary)
+    vocabulary['unk'] = train_vocab_len # 1 for safety
     val_data_processed = process_data(val_data, vocabulary)  # use <UNK> token for all unseen words in test corpus
     test_data_processed = process_data(test_data, vocabulary)  # use <UNK> token for all unseen words in test corpus
     # print(len(test_data_processed))

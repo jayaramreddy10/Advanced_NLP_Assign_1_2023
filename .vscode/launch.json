@@ -26,6 +26,18 @@
             "args": [
                 // "--config", "config.maze2d", "--dataset", "maze2d-large-v1"
             ]
+        },
+
+        {
+            "name": "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/test_dataloader_not_working.py",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/test_dataloader_not_working.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                // "--config", "config.maze2d", "--dataset", "maze2d-large-v1"
+            ]
         }
     ]
 }

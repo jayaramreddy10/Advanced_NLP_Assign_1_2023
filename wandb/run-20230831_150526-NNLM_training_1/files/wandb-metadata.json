@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.15.0-82-generic-x86_64-with-glibc2.31",
+    "python": "3.9.17",
+    "heartbeatAt": "2023-08-31T09:35:27.904056",
+    "startedAt": "2023-08-31T09:35:26.793027",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py",
+    "codePath": "Problem_1_NNLM.py",
+    "git": {
+        "remote": "https://github.com/jayaramreddy10/Advanced_NLP_Assign_1_2023.git",
+        "commit": "18e4e00e8078504fbaeb959c99897b6a23c0b864"
+    },
+    "email": "ramreddyai1010@gmail.com",
+    "root": "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1",
+    "host": "jayaram-Inspiron-7570",
+    "username": "jayaram",
+    "executable": "/home/jayaram/miniconda3/envs/Advanced_NLP/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1962.501875,
+        "min": 400.0,
+        "max": 4000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 1700.015,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2000.0,
+            "min": 400.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "total": 68.2022705078125,
+        "used": 43.19879150390625
+    },
+    "gpu": "NVIDIA GeForce 940MX",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce 940MX",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.360084533691406
+    }
+}

@@ -1,0 +1,5 @@
+usage: Problem_1_NNLM.py [-h] [-o OUTPUT_DIR] [-save_ckpt SAVE_CKPT]
+                         [-w_sz WINDOW_SIZE] [-e EPOCHS]
+                         [-n_steps_per_epoch NUMBER_OF_STEPS_PER_EPOCH]
+                         [-lr LEARNING_RATE] [-w NUM_WORKERS]
+Problem_1_NNLM.py: error: unrecognized arguments: args

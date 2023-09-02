@@ -1,0 +1,87 @@
+2023-09-02 01:17:46,174 INFO    StreamThr :5713 [internal.py:wandb_internal():86] W&B internal server running at pid: 5713, started at: 2023-09-02 01:17:46.173549
+2023-09-02 01:17:46,179 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status
+2023-09-02 01:17:46,186 INFO    WriterThread:5713 [datastore.py:open_for_write():85] open: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_011746-NNLM_training_1/run-NNLM_training_1.wandb
+2023-09-02 01:17:46,187 DEBUG   SenderThread:5713 [sender.py:send():379] send: header
+2023-09-02 01:17:46,206 DEBUG   SenderThread:5713 [sender.py:send():379] send: run
+2023-09-02 01:17:49,526 INFO    SenderThread:5713 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f5e4c22d220>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5e4c22d220>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/wandb/sdk/lib/gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5e4c22d220>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2023-09-02 01:17:51,210 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:17:56,214 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:01,217 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:06,220 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:11,223 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:16,227 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:21,230 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:26,234 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:31,237 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:36,241 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:41,244 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 01:18:46,248 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: cancel
+2023-09-02 01:18:46,249 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: cancel
+2023-09-02 01:18:46,251 DEBUG   SenderThread:5713 [sender.py:send():388] Record cancelled: run
+2023-09-02 01:18:46,252 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:18:51,253 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:18:56,254 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:01,256 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:06,257 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:11,259 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:16,262 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:21,264 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:26,266 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 01:19:31,267 DEBUG   HandlerThread:5713 [handler.py:handle_request():144] handle_request: status_report

@@ -81,7 +81,7 @@ class AugusteDataset(Dataset):
                 word_embedding = self.word_emb_model.vectors[self.word_emb_model.stoi[unk_token]]
             prefix_word_embeddings.append(word_embedding)
 
-        # prefix_word_embeddings = [self.word_emb_model[word] for word in prefix]
+        # prefix_word_embeddings = [self.word_emb_model[word] for word in prefix_window]
         prefix_emb = np.concatenate(prefix_word_embeddings)
         prefix_emb = np.reshape(prefix_emb, (self.window_size, -1))   #(seq_len, embed_dim for LSTM)
 
@@ -188,14 +188,14 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-e", "--epochs", type=int, default=100, help="Number of epochs to train."
+        "-e", "--epochs", type=int, default=50, help="Number of epochs to train."
     )
 
     parser.add_argument(
         "-n_steps_per_epoch",
         "--number_of_steps_per_epoch",
         type=int,
-        default=5000,
+        default=1000,
         help="Number of steps per epoch",
     )
 
@@ -252,7 +252,8 @@ if __name__ == "__main__":
     val_data = clean_text(val)
     test_data = clean_text(test)
     vocabulary = build_vocab(train_data)  # give a label to each unique word 
-    vocabulary['unk'] = -1
+    train_vocab_len = len(vocabulary)
+    vocabulary['unk'] = train_vocab_len # 1 for safety
     val_data_processed = process_data(val_data, vocabulary)  # use <UNK> token for all unseen words in test corpus
     test_data_processed = process_data(test_data, vocabulary)  # use <UNK> token for all unseen words in test corpus
     # print(len(test_data_processed))

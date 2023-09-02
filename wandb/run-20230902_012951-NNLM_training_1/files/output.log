@@ -1,0 +1,7 @@
+
+59710
+Backend TkAgg is interactive backend. Turning interactive mode on.
+Epoch 0 / 2 | /home/jayaram/research/research_tracks/table_top_rearragement/test_diffusion_planning/logs/maze2d-large-v1/diffusion
+0:   4.8879  | t:   1.2119
+100:   4.8091  | t:   7.2654
+[ utils/training ] Saved model to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt

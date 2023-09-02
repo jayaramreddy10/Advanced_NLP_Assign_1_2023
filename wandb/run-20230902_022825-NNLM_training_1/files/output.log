@@ -1,0 +1,21 @@
+
+59710
+Epoch 0 / 2 | /home/jayaram/research/research_tracks/table_top_rearragement/test_diffusion_planning/logs/maze2d-large-v1/diffusion
+0:   4.8793  | t:   0.5081
+100:   4.8262  | t:   5.8605
+[ utils/training ] Saved model to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt
+Traceback (most recent call last):
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py", line 279, in <module>
+    train_network(args, train_dataset, val_dataset)
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_1_NNLM.py", line 156, in train_network
+    trainer.train_NNLM(device, i, n_train_steps=args.number_of_steps_per_epoch)
+  File "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Trainer.py", line 169, in train_NNLM
+    val_loss = self.criterion(val_outputs, val_targets)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/home/jayaram/miniconda3/envs/Advanced_NLP/lib/python3.9/site-packages/torch/nn/functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: CUDA error: device-side assert triggered
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.

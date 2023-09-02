@@ -9,6 +9,7 @@ from timer import Timer
 from arrays import batch_to_device, to_np, apply_dict, to_device
 from torch import nn
 import wandb
+import time
 
 def cycle(dl):
     while True:
@@ -78,7 +79,7 @@ class Trainer_jayaram(object):
             self.train_dataset, batch_size=train_batch_size, num_workers=1, shuffle=True, pin_memory=True
         ))
         self.val_dataloader = torch.utils.data.DataLoader(
-            self.val_dataset, batch_size=train_batch_size, shuffle=True
+            self.val_dataset, batch_size=train_batch_size, num_workers=1, shuffle=True, pin_memory=True
         )
         # self.dataloader_vis = cycle(torch.utils.data.DataLoader(
         #     self.dataset, batch_size=1, num_workers=0, shuffle=True, pin_memory=True
@@ -132,15 +133,18 @@ class Trainer_jayaram(object):
 
                 loss = self.criterion(outputs, targets)
                 loss = loss / self.gradient_accumulate_every
-                wandb.log({'loss': loss, 'epoch': epoch_no, 'step no': step}) #, 'batch': t})
                 # for name, param in self.model.named_parameters():
                 #     if param.grad is not None:
                 #         print(f'Parameter: {name}, Gradient norm: {param.grad.norm()}')
 
                 loss.backward()
 
-                self.optimizer.step()
-                self.optimizer.zero_grad()
+            #scale back loss
+            loss = loss * self.gradient_accumulate_every
+            wandb.log({'train loss NNLM': loss, 'epoch': epoch_no, 'step no': step}) #, 'batch': t})
+
+            self.optimizer.step()
+            self.optimizer.zero_grad()
 
             if self.step % self.update_ema_every == 0:
                 self.step_ema()
@@ -151,26 +155,28 @@ class Trainer_jayaram(object):
 
         label = epoch_no
         self.save(label)
-
+        
         # report validation loss/scores
         validation_loss = 0.0    #for entire val dataset in current epoch
         # Set your model to evaluation mode
         self.model.eval()
         # Iterate through the validation dataset
         with torch.no_grad():
-            for  val_batch in self.val_dataloader:
-                val_batch = to_device(val_batch)
+            for  idx, val_batch in enumerate(self.val_dataloader):
+                for i, el in enumerate(val_batch):
+                    val_batch[i] = to_device(val_batch[i])
                 val_outputs = self.model(val_batch[0])
                 _, val_predictions = torch.max(val_outputs, 1)
                 val_targets = val_batch[1]
                 val_targets = val_targets.to(torch.long)
                 # Calculate validation loss
                 val_loss = self.criterion(val_outputs, val_targets)
-                validation_loss += val_loss.item()              
-                wandb.log({'val loss': val_loss, 'epoch': epoch_no}) #, 'batch': t})
+                validation_loss += val_loss            
 
-        average_validation_loss = validation_loss / len(self.valid_dataloader)
+        average_validation_loss = validation_loss / len(self.val_dataloader)
         print(f'Validation Loss: {average_validation_loss:.4f}, Epoch: {epoch_no}')
+        wandb.log({'val loss NNLM': average_validation_loss, 'epoch': epoch_no}) #, 'batch': t})
+
         # Set your model back to training mode
         self.model.train()
 
@@ -183,6 +189,7 @@ class Trainer_jayaram(object):
             
         timer = Timer()
         for step in range(n_train_steps):
+            loss = 0.0
             for i in range(self.gradient_accumulate_every):
                 batch = next(self.train_dataloader)   
 
@@ -192,8 +199,8 @@ class Trainer_jayaram(object):
 
                 # NNLM: batch[1].size: (B, )
                 # LSTM: batch[1].size: (B, window_size/seq_len)
-                for i, el in enumerate(batch):
-                    batch[i] = to_device(batch[i])
+                for k, el in enumerate(batch):
+                    batch[k] = to_device(batch[k])
                 
                 outputs, _ = self.model(batch[0])   #logits in this case (seq_len, B, vocab_size) 
                 # outputs = einops.rearrange(outputs, 'w b e -> b w e')   #(B, seq_len, vocab_size)
@@ -201,21 +208,25 @@ class Trainer_jayaram(object):
 
                 # _, label_predictions = torch.max(outputs, 1)
                 targets = batch[1].T
-                targets = targets.to(torch.long)
+                targets = targets.to(torch.long)   #(seq_len, B = 512)
                 targets = targets.reshape(-1)
 
                 loss = self.criterion(outputs, targets)
                 loss = loss / self.gradient_accumulate_every
-                wandb.log({'loss': loss, 'epoch': epoch_no, 'step no': step}) #, 'batch': t})
+                
                 # for name, param in self.model.named_parameters():
                 #     if param.grad is not None:
                 #         print(f'Parameter: {name}, Gradient norm: {param.grad.norm()}')
 
                 loss.backward()
 
+            #scale back loss
+            loss = loss * self.gradient_accumulate_every
+            wandb.log({'train loss LSTM': loss, 'epoch': epoch_no, 'step no': step}) #, 'batch': t})
+            
             # train_perplexity = compute_perplexity()
             # wandb.log({'train_perplexity': train_perplexity, 'epoch': epoch_no, 'step no': step}) #, 'batch': t})
-
+            
             self.optimizer.step()
             self.optimizer.zero_grad()
 
@@ -234,21 +245,34 @@ class Trainer_jayaram(object):
         # Set your model to evaluation mode
         self.model.eval()
         # Iterate through the validation dataset
+        print('val dataloader len: {}'.format(len(self.val_dataloader)))
+
         with torch.no_grad():
             for val_batch in self.val_dataloader:
-                val_batch = to_device(val_batch)
-                val_outputs = self.model(val_batch[0])
-                _, val_predictions = torch.max(val_outputs, 1)
+                time_s = time.time()
+
+                val_batch[0] = einops.rearrange(val_batch[0], 'b w e -> w b e') 
+                for i, el in enumerate(val_batch):
+                    val_batch[i] = to_device(val_batch[i])
+                val_outputs, _ = self.model(val_batch[0])
+                val_outputs = val_outputs.view(-1, val_outputs.size(-1))
+                # _, val_predictions = torch.max(val_outputs, 1)
                 val_targets = val_batch[1]
-                val_targets = torch.round(val_targets).long()
+                val_targets = val_targets.to(torch.long)
+                val_targets = val_targets.reshape(-1)
                 # Calculate validation loss
                 val_loss = self.criterion(val_outputs, val_targets)
-                validation_loss += val_loss.item()              
-                wandb.log({'val loss': val_loss, 'epoch': epoch_no}) #, 'batch': t})
+                validation_loss += val_loss.item()          
 
-        average_validation_loss = validation_loss / len(self.valid_dataloader)
+                time_e = time.time()
+                print('one batch val time: {}'.format(time_e - time_s))
+
+        
+        average_validation_loss = validation_loss / len(self.val_dataloader)
         # log results to text file
         print(f'Validation Loss: {average_validation_loss:.4f}, Epoch: {epoch_no}')
+        wandb.log({'val loss LSTM': average_validation_loss, 'epoch': epoch_no}) #, 'batch': t})
+
         # Set your model back to training mode
         self.model.train()
 

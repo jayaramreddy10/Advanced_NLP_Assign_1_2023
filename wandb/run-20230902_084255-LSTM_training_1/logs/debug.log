@@ -1,0 +1,26 @@
+2023-09-02 08:42:55,639 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Configure stats pid to 11193
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Loading settings from /home/jayaram/.config/wandb/settings
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Loading settings from /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/settings
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Problem_2_LSTM.py', 'program': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/Problem_2_LSTM.py'}
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_init.py:_log_setup():524] Logging user logs to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_084255-LSTM_training_1/logs/debug.log
+2023-09-02 08:42:55,640 INFO    MainThread:11193 [wandb_init.py:_log_setup():525] Logging internal logs to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_084255-LSTM_training_1/logs/debug-internal.log
+2023-09-02 08:42:55,641 INFO    MainThread:11193 [wandb_init.py:init():564] calling init triggers
+2023-09-02 08:42:55,641 INFO    MainThread:11193 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {}
+2023-09-02 08:42:55,642 INFO    MainThread:11193 [wandb_init.py:init():613] starting backend
+2023-09-02 08:42:55,642 INFO    MainThread:11193 [wandb_init.py:init():617] setting up manager
+2023-09-02 08:42:55,647 INFO    MainThread:11193 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-09-02 08:42:55,651 INFO    MainThread:11193 [wandb_init.py:init():623] backend started and connected
+2023-09-02 08:42:55,667 INFO    MainThread:11193 [wandb_init.py:init():714] updated telemetry
+2023-09-02 08:42:55,696 INFO    MainThread:11193 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2023-09-02 08:42:57,232 INFO    MainThread:11193 [wandb_run.py:_on_init():2180] communicating current version
+2023-09-02 08:42:57,472 INFO    MainThread:11193 [wandb_run.py:_on_init():2189] got version response 
+2023-09-02 08:42:57,473 INFO    MainThread:11193 [wandb_init.py:init():798] starting run threads in backend
+2023-09-02 08:42:59,562 INFO    MainThread:11193 [wandb_run.py:_console_start():2159] atexit reg
+2023-09-02 08:42:59,563 INFO    MainThread:11193 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-09-02 08:42:59,563 INFO    MainThread:11193 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-09-02 08:42:59,563 INFO    MainThread:11193 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-09-02 08:42:59,564 INFO    MainThread:11193 [wandb_init.py:init():839] run started, returning control to user process

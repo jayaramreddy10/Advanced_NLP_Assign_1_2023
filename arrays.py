@@ -30,6 +30,8 @@ def to_device(x, device=DEVICE):
 		return x.to(device, dtype=torch.float)
 	elif type(x) is dict:
 		return {k: to_device(v, device) for k, v in x.items()}
+	# elif type(x) is list:
+	# 	return [to_device(el, device) for el in x]
 	else:
 		print(f'Unrecognized type in `to_device`: {type(x)}')
 	# return [x.to(device) for x in xs]
