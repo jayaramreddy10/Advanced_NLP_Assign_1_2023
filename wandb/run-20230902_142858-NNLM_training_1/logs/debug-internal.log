@@ -1,0 +1,37 @@
+2023-09-02 14:28:58,581 INFO    StreamThr :44594 [internal.py:wandb_internal():86] W&B internal server running at pid: 44594, started at: 2023-09-02 14:28:58.579852
+2023-09-02 14:28:58,586 DEBUG   HandlerThread:44594 [handler.py:handle_request():144] handle_request: status
+2023-09-02 14:28:58,594 INFO    WriterThread:44594 [datastore.py:open_for_write():85] open: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142858-NNLM_training_1/run-NNLM_training_1.wandb
+2023-09-02 14:28:58,595 DEBUG   SenderThread:44594 [sender.py:send():379] send: header
+2023-09-02 14:28:58,619 DEBUG   SenderThread:44594 [sender.py:send():379] send: run
+2023-09-02 14:28:59,676 INFO    SenderThread:44594 [dir_watcher.py:__init__():211] watching files in: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142858-NNLM_training_1/files
+2023-09-02 14:28:59,677 INFO    SenderThread:44594 [sender.py:_start_run_threads():1121] run started: NNLM_training_1 with start time 1693645138.579619
+2023-09-02 14:28:59,692 DEBUG   SenderThread:44594 [sender.py:send_request():406] send_request: summary_record
+2023-09-02 14:28:59,693 INFO    SenderThread:44594 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-02 14:28:59,725 DEBUG   HandlerThread:44594 [handler.py:handle_request():144] handle_request: check_version
+2023-09-02 14:28:59,726 DEBUG   SenderThread:44594 [sender.py:send_request():406] send_request: check_version
+2023-09-02 14:29:00,478 DEBUG   HandlerThread:44594 [handler.py:handle_request():144] handle_request: run_start
+2023-09-02 14:29:00,488 DEBUG   HandlerThread:44594 [system_info.py:__init__():31] System info init
+2023-09-02 14:29:00,488 DEBUG   HandlerThread:44594 [system_info.py:__init__():46] System info init done
+2023-09-02 14:29:00,489 INFO    HandlerThread:44594 [system_monitor.py:start():181] Starting system monitor
+2023-09-02 14:29:00,489 INFO    HandlerThread:44594 [system_monitor.py:probe():201] Collecting system info
+2023-09-02 14:29:00,490 INFO    SystemMonitor:44594 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-02 14:29:00,493 INFO    SystemMonitor:44594 [interfaces.py:start():190] Started cpu monitoring
+2023-09-02 14:29:00,495 INFO    SystemMonitor:44594 [interfaces.py:start():190] Started disk monitoring
+2023-09-02 14:29:00,498 INFO    SystemMonitor:44594 [interfaces.py:start():190] Started gpu monitoring
+2023-09-02 14:29:00,499 INFO    SystemMonitor:44594 [interfaces.py:start():190] Started memory monitoring
+2023-09-02 14:29:00,501 INFO    SystemMonitor:44594 [interfaces.py:start():190] Started network monitoring
+2023-09-02 14:29:00,506 ERROR   gpu       :44594 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 14:29:00,506 ERROR   gpu       :44594 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-09-02 14:29:00,547 DEBUG   HandlerThread:44594 [system_info.py:probe():195] Probing system
+2023-09-02 14:29:00,554 DEBUG   HandlerThread:44594 [system_info.py:_probe_git():180] Probing git
+2023-09-02 14:29:00,576 DEBUG   HandlerThread:44594 [system_info.py:_probe_git():188] Probing git done
+2023-09-02 14:29:00,577 DEBUG   HandlerThread:44594 [system_info.py:probe():240] Probing system done
+2023-09-02 14:29:00,577 DEBUG   HandlerThread:44594 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-82-generic-x86_64-with-glibc2.31', 'python': '3.9.17', 'heartbeatAt': '2023-09-02T08:59:00.547563', 'startedAt': '2023-09-02T08:58:58.551274', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/report_perplexity_scores.py', 'codePath': 'report_perplexity_scores.py', 'git': {'remote': 'https://github.com/jayaramreddy10/Advanced_NLP_Assign_1_2023.git', 'commit': 'b8b1398dbf6bdd26894d79a14874d63582d5437f'}, 'email': 'ramreddyai1010@gmail.com', 'root': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1', 'host': 'jayaram-Inspiron-7570', 'username': 'jayaram', 'executable': '/home/jayaram/miniconda3/envs/Advanced_NLP/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2159.53325, 'min': 400.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 3215.855, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}, {'current': 2000.0, 'min': 400.0, 'max': 4000.0}], 'disk': {'total': 68.2022705078125, 'used': 43.029541015625}, 'gpu': 'NVIDIA GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 940MX', 'memory_total': 4294967296}], 'memory': {'total': 15.360076904296875}}
+2023-09-02 14:29:00,577 INFO    HandlerThread:44594 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-02 14:29:00,577 INFO    HandlerThread:44594 [system_monitor.py:probe():214] Publishing system info
+2023-09-02 14:29:00,577 DEBUG   HandlerThread:44594 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-02 14:29:00,579 DEBUG   HandlerThread:44594 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-02 14:29:00,579 DEBUG   HandlerThread:44594 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-02 14:29:00,688 INFO    Thread-18 :44594 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142858-NNLM_training_1/files/wandb-summary.json
+2023-09-02 14:29:00,688 INFO    Thread-18 :44594 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142858-NNLM_training_1/files/requirements.txt
+2023-09-02 14:29:00,689 INFO    Thread-18 :44594 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142858-NNLM_training_1/files/conda-environment.yaml

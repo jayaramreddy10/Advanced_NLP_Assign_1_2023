@@ -1,0 +1,13 @@
+2023-09-02 14:28:03,496 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2023-09-02 14:28:03,496 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Configure stats pid to 44146
+2023-09-02 14:28:03,496 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Loading settings from /home/jayaram/.config/wandb/settings
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Loading settings from /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/settings
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'report_perplexity_scores.py', 'program': '/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/report_perplexity_scores.py'}
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_init.py:_log_setup():524] Logging user logs to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142803-LSTM_training_1/logs/debug.log
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_init.py:_log_setup():525] Logging internal logs to /home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/wandb/run-20230902_142803-LSTM_training_1/logs/debug-internal.log
+2023-09-02 14:28:03,497 INFO    MainThread:44146 [wandb_init.py:init():564] calling init triggers
+2023-09-02 14:28:03,498 INFO    MainThread:44146 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {}
+2023-09-02 14:28:03,498 INFO    MainThread:44146 [wandb_init.py:init():608] wandb.init() called when a run is still active

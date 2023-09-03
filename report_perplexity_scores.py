@@ -2,36 +2,154 @@ import numpy as np
 import math
 import spacy
 import torch
-from Problem_1_NNLM import *
-from Problem_2_LSTM import LSTM_LM
+import re
+import torch.nn as nn
+import torchtext.vocab as t_vocab
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def compute_perplexity_scores(model, dataset, word_emb_mode, vocabulary):
-    vocab_size = len(vocabulary)
-    for sent_no, sentence in enumerate(dataset):
-        # Tokenize and convert words to indices (replace with your preprocessing)
-        words = clean_text(dataset)  #split sentence into words
-        words_processed = process_data(val_data, vocabulary) 
-        # = [word_emb_model[word] for word in words]  # Convert words to indices
-        
-        # Convert to PyTorch tensor
-        inputs = torch.Tensor(input_indices).unsqueeze(0)  # Add batch dimension
-        
-        # Forward pass
-        outputs, _ = model(inputs)
-        
-        # Define target (e.g., if you have a target sentence)
-        target = torch.LongTensor(target_indices).unsqueeze(0)  # Add batch dimension
-        
-        # Calculate loss
-        loss = nn.CrossEntropyLoss(outputs.view(-1, vocab_size), target.view(-1))
+class NNLM(nn.Module):
+    def __init__(self, input_dim, hidden_dim_1, hidden_dim_2, len_vocab, window_size):
+        super(NNLM, self).__init__() # init the base Module Class
+        self.input_dim = input_dim
+        self.hidden_dim_1 = hidden_dim_1
+        self.hidden_dim_2 = hidden_dim_2
+        self.len_vocab = len_vocab
 
-        # Calculate perplexity
-        perplexity = torch.exp(loss)
+        self.tanh = torch.nn.Tanh()
+
+        self.Relu = torch.nn.ReLU()
+
+        self.W1 = nn.Linear(input_dim*window_size, hidden_dim_1)
+        self.W2 = nn.Linear(hidden_dim_1, hidden_dim_2)
+        self.W3 = nn.Linear(hidden_dim_2, len_vocab)
+
+    def forward(self, input): 
+        # hidden1 = self.tanh(self.W1(input))
+        # hidden2 = self.tanh(self.W2(hidden1))
+        hidden1 = self.tanh(self.W1(input)) 
+        hidden2 = self.tanh(self.W2(hidden1))
+
+        out = self.W3(hidden2)
+        # return out 
+        # probs = torch.nn.functional.softmax(out, dim=1)
+        return out # probs
+    
+class LSTM_LM(nn.Module):
+    def __init__(self, embedding_dim, hidden_dim, n_layers, vocab_size, bidirectional = False):
+        super().__init__()
+        # self.embedding = nn.Embedding(input_dim, embedding_dim)   --not required (we get it from Glove)
+        self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=n_layers, bidirectional=bidirectional)
+        self.W = nn.Linear(hidden_dim, vocab_size)
+
+    def forward(self, input):
+        # input shape => [seq_len, batch_size, embedding_dim]
+        output, (hidden, cell) = self.lstm(input)
+        # output shape => [seq_len, batch_size, hidden_size]
+        # hidden shape => [num_layers, batch_size, hidden_size]
+        # cell shape => [num_layers, batch_size, hidden_size]
+ 
+        output = self.W(output)   #(seq_len, batch_size, vocab_size) , will broadcasting work here?
+        return output, (hidden, cell)
+    
+def clean_text(text):
+        text = text.lower()
+        text = text.strip('\n')
+        text = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \n])|(\w+:\/\/\S+)|^rt|www.+?", " ", text)
+
+        expanded_text = []
+        for word in text.split():
+            expanded_text.append(word) 
+        return expanded_text
+
+def build_vocab(text):
+        vocab = {}
+
+        for word in text:
+            if word not in vocab:
+                vocab[word] = len(vocab) # add a new type to the vocab
+        return vocab
+
+def process_data(test_data, vocab):
+    process_data = test_data.copy()
+    for  i, word in enumerate(test_data):
+        if word not in vocab:
+            process_data[i] = 'unk' 
+    return process_data
         
+
+def get_word_embeddings(sentence_words, word_emb_model):
+    #get prefix
+    prefix_word_embeddings = []
+
+    # # Define the <UNK> token to represent out-of-vocabulary words
+    unk_token = 'unk'
+    # Iterate through the words in the window
+    for word in sentence_words:
+        if word in word_emb_model.stoi:
+            # If the word is in the GloVe vocabulary, get its embedding
+            word_embedding = word_emb_model.vectors[word_emb_model.stoi[word]]
+        else:
+            # If the word is not in the GloVe vocabulary, use the embedding of <UNK>
+            word_embedding = word_emb_model.vectors[word_emb_model.stoi[unk_token]]
+        prefix_word_embeddings.append(word_embedding)
+
+    # prefix_word_embeddings = [self.word_emb_model[word] for word in prefix_window]
+    prefix_emb = np.concatenate(prefix_word_embeddings)
+    prefix_emb = torch.from_numpy(prefix_emb)
+
+    return prefix_emb
+
+def compute_perplexity_scores(model, dataset, word_emb_mode, vocabulary, is_NNLM = True):
+    vocab_size = len(vocabulary)
+
+    perplexity_scores_sentences = []
+    for sent_no, sentence in enumerate(dataset):
+        # Initialize the entropy
+        entropy = 0.0
+        # Tokenize and convert words to indices (replace with your preprocessing)
+        words = clean_text(sentence)  #split sentence into words
+        words_processed = process_data(words, vocabulary) 
+        if(len(words_processed) <= 5):
+            entropy += 0.0
+            continue
+        # = [word_emb_model[word] for word in words]  # Convert words to indices
+        # Iterate through the words in the segment
+        for i in range(len(words_processed) - 5):  # Assuming your model uses 5 words to predict the next
+            context = words_processed[i:i+5]  # Get the previous 4 words
+            next_word_gt = words_processed[i+5]  # Get the next word
+            next_word_gt_label = vocabulary[next_word_gt]
+
+            # Convert to PyTorch tensor
+            inputs = torch.Tensor(get_word_embeddings(context, word_emb_mode)).unsqueeze(0)  # Add batch dimension
+            inputs = inputs.to(device)#.type(dtype)
+            
+            # Forward pass
+            if(is_NNLM):
+                outputs = model(inputs)
+            else:
+                outputs, _ = model(inputs)   #should map from (B=1, 1500) to (B, len(vocab)) which are dist of probs
+
+            # # Use your language model to get the probability of the next word
+            probs = torch.nn.functional.softmax(outputs[0])
+            probability = probs[next_word_gt_label]        
+            # Define target (first word of next sentence)
+            # target_word = dataset[sent_no + 1][0]
+            # label = vocabulary[target_word]   #vocab is dict (maps words to labels)
+
+            # # Calculate the entropy
+            entropy += -math.log2(probability)
+            # Calculate loss
+            # loss = nn.CrossEntropyLoss(outputs.view(-1, vocab_size), label.view(-1))
+        
+        # Calculate perplexity
+        perplexity = 2**(entropy / (len(words_processed) - 5))
+        # perplexity = torch.exp(loss)
         # Print or store perplexity for the current sentence
-        print(f"Perplexity for sentence '{sentence}': {perplexity.item()}")
+        print(f"Perplexity for sentence '{sentence}': {perplexity}")
+        perplexity_scores_sentences.append(perplexity)
+
+    return perplexity_scores_sentences
 
 # Define your sentences and corresponding perplexity scores
 # split text into sentences
@@ -65,7 +183,7 @@ vocabulary = build_vocab(train_data)  # give a label to each unique word
 vocabulary['unk'] = len(vocabulary)
 word_emd_model = t_vocab.GloVe(name='6B', dim=300)  # You can change 'dim' to match the dimensionality of your GloVe model
 
-is_NNLM = False
+is_NNLM = True
 if(is_NNLM):
     # load model
     checkpoint_path = "/home/jayaram/research/NLP_course_papers_and_content/Assignments/Assign_1/logs/NNLM/state_0.pt"
@@ -101,9 +219,12 @@ model_state_dict = checkpoint['model']
 # Load the model and optimizer states from the checkpoint
 model.load_state_dict(model_state_dict)
 
+train = sentences[:30000]
+val = sentences[30000:40000]
+test = sentences[40000:59710]
 # compute PPL Scores
 # train
-train_PPL_scores = compute_perplexity_scores(model, train, word_emd_model, vocabulary)
+train_PPL_scores = compute_perplexity_scores(model, train, word_emd_model, vocabulary, is_NNLM)
 # Calculate the average perplexity score
 average_score = sum(train_PPL_scores) / len(train_PPL_scores)
 # Define the file path where you want to save the text file
@@ -117,7 +238,7 @@ with open(file_path, "w") as file:
 print(f'Average train PPL Score: {average_score:.2f}')
 
 # val
-val_PPL_scores = compute_perplexity_scores(model, val)
+val_PPL_scores = compute_perplexity_scores(model, val, word_emd_model, vocabulary, is_NNLM)
 # Calculate the average perplexity score
 average_score = sum(val_PPL_scores) / len(val_PPL_scores)
 # Define the file path where you want to save the text file
@@ -130,8 +251,8 @@ with open(file_path, "w") as file:
 # Print the average score
 print(f'Average val PPL Score: {average_score:.2f}')
 
-# train
-test_PPL_scores = compute_perplexity_scores(model, test)
+# test
+test_PPL_scores = compute_perplexity_scores(model, test, word_emd_model, vocabulary, is_NNLM)
 # Calculate the average perplexity score
 average_score = sum(test_PPL_scores) / len(test_PPL_scores)
 # Define the file path where you want to save the text file
